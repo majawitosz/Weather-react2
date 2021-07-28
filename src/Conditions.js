@@ -2,8 +2,8 @@ import "./App";
 
 export default function Conditions() {
   return (
-    <div className="conditions">
-      <ul>
+    <div>
+      <ul className="conditions">
         <li>
           Humidity: <span>80</span>%
         </li>
