@@ -1,6 +1,6 @@
 import "./App";
 
-export default function () {
+export default function SearchBar() {
   return (
     <div>
       <form>
