@@ -6,7 +6,7 @@ export default function Footer() {
       <footer>
         <a
           href="https://github.com/majawitosz/vanilla-weather-app"
-          class="github-link"
+          className="github-link"
         >
           Open-source code
         </a>
