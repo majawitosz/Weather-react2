@@ -1,10 +1,8 @@
 .App {
-  font-family: Quicksand, Arial, sans-serif;
+  font-family: "Quicksand", Arial, sans-serif;
+  font-weight: 200;
 }
 
-html {
-  height: 100%;
-}
 body {
   background-image: url(https://images.hdqwalls.com/download/colorful-sunset-sky-5k-5u-1440x900.jpg);
 }
@@ -22,84 +20,7 @@ body {
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 20px 10px;
-  font-family: Quicksand, Arial, sans-serif;
-}
-
-.City {
-  font-size: 40px;
-  line-height: 50px;
-  color: aliceblue;
-}
-p {
-  color: aliceblue;
-  font-size: 15px;
-  margin-bottom: 0 !important;
-  text-align: left;
-  line-height: 17px;
-}
-.temp {
-  font-size: 80px;
-  font-family: "Raleway", sans-serif;
-  line-height: 75px;
-  color: aliceblue;
-  font-weight: 300;
-  text-align: left;
-}
-.description {
-  font-size: 20px;
-  font-weight: 400;
-  color: #5a6275;
-}
-.Date {
-  display: inline-block;
-  font-size: 22px;
-  font-weight: 400;
-  color: aliceblue;
-  line-height: 25px;
-}
-.locationButton {
-  padding: 5px 24px;
-  border-radius: 10%;
-  box-shadow: 1px 1px 7px #fa709a;
-  background: none;
-  border: 1px solid #fa709a;
-  color: #fa709a;
-}
-.locationButton:hover {
-  background-color: #fa709a;
-  color: white;
-}
-input.btn {
-  border: 1px solid #fa709a;
-  box-shadow: 1px 1px 7px #fa709a;
-  color: aliceblue;
-  font-weight: 400;
-}
-input.btn:hover {
-  background-color: #fa709a;
-  border: #fa709a;
-}
-.location-icon {
-  color: aliceblue;
-}
-.conditions {
-  list-style: none;
-  padding: 0;
-  line-height: 1.5;
-  color: aliceblue;
-  position: relative;
-  bottom: 30px;
-}
-
-span.degrees {
-  text-decoration: none;
-  font-size: 25px;
-  position: relative;
-  bottom: 75px;
-  left: 87px;
-
-  color: aliceblue;
-  font-weight: 300;
+  font-family: "Quicksand" Arial, sans-serif;
 }
 
 .main-icon {
