@@ -1,0 +1,30 @@
+.locationButton {
+  padding: 5px 24px;
+  border-radius: 10%;
+  box-shadow: 1px 1px 7px #fa709a;
+  background: none;
+  border: 1px solid #fa709a;
+  color: #fa709a;
+}
+.locationButton:hover {
+  background-color: #fa709a;
+  color: white;
+}
+input.btn {
+  border: 1px solid #fa709a;
+  box-shadow: 1px 1px 7px #fa709a;
+  color: aliceblue;
+  font-weight: 400;
+}
+input.btn:hover {
+  background-color: #fa709a;
+  border: #fa709a;
+}
+.location-icon {
+  color: aliceblue;
+}
+.City {
+  font-size: 40px;
+  line-height: 50px;
+  color: aliceblue;
+}
