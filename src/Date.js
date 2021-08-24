@@ -1,4 +1,5 @@
 import "./App";
+import "./Date.css";
 
 export default function Date() {
   return (
