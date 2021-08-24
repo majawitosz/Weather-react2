@@ -1,0 +1,14 @@
+.Date p {
+  color: aliceblue;
+  font-size: 15px;
+  margin-bottom: 0 !important;
+  text-align: left;
+  line-height: 17px;
+}
+.Date {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 400;
+  color: aliceblue;
+  line-height: 25px;
+}
