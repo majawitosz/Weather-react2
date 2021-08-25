@@ -1,3 +1,8 @@
+.row {
+  justify-content: flex-start;
+  margin: 0;
+}
+
 .locationButton {
   padding: 5px 24px;
   border-radius: 10%;
