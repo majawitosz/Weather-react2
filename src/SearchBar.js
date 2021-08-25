@@ -4,8 +4,8 @@ import "./SearchBar.css";
 export default function SearchBar() {
   return (
     <div className="container">
-      <div className="row justify-content-md-center">
-        <div className="col-8 col-md-10">
+      <div className="row">
+        <div className="col-9 col-md-10">
           <form>
             <div className="input-group mb-3">
               <input
@@ -24,7 +24,6 @@ export default function SearchBar() {
             </div>
           </form>
         </div>
-
         <div className="col-2 col-md-2">
           <button className="locationButton">
             <svg
