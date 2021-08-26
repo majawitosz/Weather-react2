@@ -1,7 +1,16 @@
 import "./App";
 import "./SearchBar.css";
+import axios from "axios";
 
 export default function SearchBar() {
+  function handleResponse(resposne) {
+    console.log(resposne.data);
+  }
+  const apiKey = "e3d19480e0bceb73505db2a3f2659405";
+  let city = `Katowice`;
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="container">
       <div className="row">
@@ -24,7 +33,7 @@ export default function SearchBar() {
             </div>
           </form>
         </div>
-        <div className="col-2 col-md-2">
+        <div className="col-3 col-md-2">
           <button className="locationButton">
             <svg
               xmlns="http://www.w3.org/2000/svg"
