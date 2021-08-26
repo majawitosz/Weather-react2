@@ -1,6 +1,7 @@
 .App {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 200;
+  flex-direction: row;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     rgb(216, 176, 216) 23.9%,
     rgb(53, 169, 215) 86.5%
   );
-
+  display: block;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 20px;
