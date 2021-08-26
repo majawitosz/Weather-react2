@@ -1,6 +1,6 @@
 .row {
-  justify-content: flex-start;
-  margin: 0;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
 }
 
 .locationButton {
