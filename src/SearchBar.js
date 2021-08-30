@@ -4,22 +4,22 @@ import "./SearchBar.css";
 import axios from "axios";
 import "./Temp.css";
 import "./Date.css";
+import FormattedDate from "./FormattedDate";
 
 export default function SearchBar(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  function handleResponse(resposne) {
-    console.log(resposne.data);
+  function handleResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: resposne.data.main.temp,
-      wind: resposne.data.wind.speed,
-      city: resposne.data.name,
-      humidity: resposne.data.main.humidity,
-      pressure: resposne.data.main.pressure,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+      pressure: response.data.main.pressure,
       iconUrl:
         "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/279/sun-behind-cloud_26c5.png",
-      description: resposne.data.weather[0].description,
-      date: "Monday 16:24",
+      description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
@@ -64,13 +64,8 @@ export default function SearchBar(props) {
         <div className="City">
           <h1>{weatherData.city}</h1>
         </div>
-        <div className="row">
-          <div className="Date">
-            <p>Last updated at:</p>
-            <span className="current-time">{weatherData.date}</span>
-          </div>
-        </div>
-
+        <div className="row"></div>
+        <FormattedDate date={weatherData.date} />
         <div className="row">
           <div className="col-6 col-sm-4 col-md-3 main-icon">
             <div className="Icon">
@@ -101,7 +96,6 @@ export default function SearchBar(props) {
     );
   } else {
     const apiKey = "e3d19480e0bceb73505db2a3f2659405";
-
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
