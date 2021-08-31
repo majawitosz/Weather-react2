@@ -15,16 +15,16 @@ export default function SearchBar(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
-      iconUrl:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/279/sun-behind-cloud_26c5.png",
-      description: response.data.weather[0].description,
+      iconUrl: `src/images/${response.data.weather[0].icon}.png`,
+
+      description: response.data.weather.description,
       date: new Date(response.data.dt * 1000),
     });
   }
 
   function search() {
     const apiKey = "e3d19480e0bceb73505db2a3f2659405";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
@@ -83,3 +83,5 @@ export default function SearchBar(props) {
     return "Loading...";
   }
 }
+
+//`/public/images/${response.data.weather[0].icon}.png`,
