@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./App";
 import "./SearchBar.css";
 import axios from "axios";
-import "./Temp.css";
-import "./Date.css";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function SearchBar(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -24,7 +23,7 @@ export default function SearchBar(props) {
   }
   if (weatherData.ready) {
     return (
-      <div className="container">
+      <div className="SearchBar">
         <div className="row">
           <div className="col-9 col-md-10">
             <form>
@@ -61,37 +60,7 @@ export default function SearchBar(props) {
             </button>
           </div>
         </div>
-        <div className="City">
-          <h1>{weatherData.city}</h1>
-        </div>
-        <div className="row"></div>
-        <FormattedDate date={weatherData.date} />
-        <div className="row">
-          <div className="col-6 col-sm-4 col-md-3 main-icon">
-            <div className="Icon">
-              <img src={weatherData.iconUrl} alt={weatherData.description} />
-            </div>
-          </div>
-          <div className="col-6 col-sm-8 col-md-9">
-            <div className="Temp">
-              <h2 className="temp">{Math.round(weatherData.temperature)}</h2>
-              <span className="degrees"> °C </span>
-            </div>
-            <div>
-              <ul className="conditions">
-                <li>
-                  Humidity: <span>{weatherData.humidity}</span>%
-                </li>
-                <li>
-                  Wind: <span>{Math.round(weatherData.wind)}</span> m/h
-                </li>
-                <li>
-                  Air pressure: <span>{weatherData.pressure}</span> hPa
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {

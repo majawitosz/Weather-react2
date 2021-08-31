@@ -1,6 +1,5 @@
 import React from "react";
-
-import "./Date.css";
+import "./FormattedDate.css";
 
 export default function Date(props) {
   let days = [

@@ -29,3 +29,8 @@ span.degrees {
   color: aliceblue;
   font-weight: 300;
 }
+.City {
+  font-size: 40px;
+  line-height: 50px;
+  color: aliceblue;
+}
