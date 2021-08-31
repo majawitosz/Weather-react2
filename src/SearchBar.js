@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./App";
 import "./SearchBar.css";
 import axios from "axios";
-
 import WeatherInfo from "./WeatherInfo";
 
 export default function SearchBar(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -21,12 +21,25 @@ export default function SearchBar(props) {
       date: new Date(response.data.dt * 1000),
     });
   }
+
+  function search() {
+    const apiKey = "e3d19480e0bceb73505db2a3f2659405";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
   if (weatherData.ready) {
     return (
       <div className="SearchBar">
         <div className="row">
           <div className="col-9 col-md-10">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -35,6 +48,7 @@ export default function SearchBar(props) {
                   aria-label="City"
                   aria-describedby="city"
                   autoComplete="off"
+                  onChange={handleCityChange}
                 />
                 <input
                   className="btn btn-outline-secondary"
@@ -64,9 +78,7 @@ export default function SearchBar(props) {
       </div>
     );
   } else {
-    const apiKey = "e3d19480e0bceb73505db2a3f2659405";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
 
     return "Loading...";
   }
