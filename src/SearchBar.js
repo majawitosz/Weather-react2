@@ -15,9 +15,8 @@ export default function SearchBar(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
-      iconUrl: `src/images/${response.data.weather[0].icon}.png`,
-
-      description: response.data.weather.description,
+      icon: response.data.weather[0].icon,
+      description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
   }
