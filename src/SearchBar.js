@@ -20,7 +20,6 @@ export default function SearchBar(props) {
       date: new Date(response.data.dt * 1000),
     });
   }
-
   function search() {
     const apiKey = "e3d19480e0bceb73505db2a3f2659405";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

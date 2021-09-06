@@ -1,9 +1,9 @@
-import images from "./images/index";
+import React from "react";
 
 export default function WeatherIcon(props) {
   return (
     <div className="Icon">
-      <img src={images.a} alt={props.alt} />
+      <img src={`/pictures/${props.code}.png`} alt={props.alt} />
     </div>
   );
 }
