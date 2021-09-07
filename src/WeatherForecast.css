@@ -19,3 +19,6 @@
   opacity: 0.5;
   margin-left: 5px;
 }
+.WeatherForecast img {
+  size: 30px;
+}
