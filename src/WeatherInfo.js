@@ -14,7 +14,11 @@ export default function WetherInfo(props) {
         <FormattedDate date={props.data.date} />
         <div className="row">
           <div className="col-6 col-sm-4 col-md-3 main-icon">
-            <WeatherIcon code={props.data.icon} alt={props.data.description} />
+            <WeatherIcon
+              size={130}
+              code={props.data.icon}
+              alt={props.data.description}
+            />
           </div>
           <div className="col-6 col-sm-8 col-md-9">
             <div className="Temp">

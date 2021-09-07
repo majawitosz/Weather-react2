@@ -3,6 +3,7 @@ import "./App";
 import "./SearchBar.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function SearchBar(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -73,6 +74,7 @@ export default function SearchBar(props) {
           </div>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
@@ -81,5 +83,3 @@ export default function SearchBar(props) {
     return "Loading...";
   }
 }
-
-//`/public/images/${response.data.weather[0].icon}.png`,
