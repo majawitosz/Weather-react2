@@ -1,0 +1,21 @@
+.WeatherForecast {
+  text-align: center;
+}
+.WeatherForecast-day {
+  border: 1px #fa709a;
+  box-shadow: 1px 2px 7px #fa709a;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px 5px;
+  color: aliceblue;
+}
+.WeatherForecast-icon {
+  display: block;
+  margin: 0 auto;
+  line-height: 1;
+}
+
+.WeatherForecast-temp-min {
+  opacity: 0.5;
+  margin-left: 5px;
+}

@@ -31,20 +31,3 @@ body {
   top: 15px;
   left: 10px;
 }
-
-.weather-icon-forecast {
-  display: block;
-  font-size: 35px;
-  margin: 0 auto;
-  line-height: 1;
-}
-#small-icons {
-  border: 1px #fa709a;
-  box-shadow: 1px 2px 7px #fa709a;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 5px 5px;
-  text-align: center;
-  color: aliceblue;
-  width: 105px;
-}
