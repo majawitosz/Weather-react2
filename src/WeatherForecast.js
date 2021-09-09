@@ -16,7 +16,6 @@ export default function WeatherForecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
-  console.log(props);
 
   if (loaded) {
     return (
