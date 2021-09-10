@@ -1,13 +1,21 @@
 .WeatherForecast {
+  justify-content: flex-start;
   text-align: center;
+  flex-wrap: wrap;
 }
+
+.WeatherForecast-week {
+  justify-content: space-evenly;
+}
+
 .WeatherForecast-day {
   border: 1px #fa709a;
   box-shadow: 1px 2px 7px #fa709a;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 5px 5px;
   color: aliceblue;
+  width: 110px;
 }
 .WeatherForecast-icon {
   display: block;
