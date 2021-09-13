@@ -34,6 +34,20 @@ export default function SearchBar(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+  function showPosition(position) {
+    console.log(position);
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude);
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    let units = "metric";
+    let apiKey = "e3d19480e0bceb73505db2a3f2659405";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function getCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
   if (weatherData.ready) {
     return (
       <div className="SearchBar">
@@ -59,7 +73,7 @@ export default function SearchBar(props) {
             </form>
           </div>
           <div className="col-3 col-md-2">
-            <button className="locationButton">
+            <button className="locationButton" onClick={getCurrentPosition}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
