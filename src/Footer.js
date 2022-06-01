@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://github.com/majawitosz/Weather-react2"
           className="github-link"
         >
-          Open-source code
+          Open-source code&nbsp;
         </a>
         by Maja Witosz 👩‍💻
       </footer>
